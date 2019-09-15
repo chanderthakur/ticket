@@ -1,11 +1,8 @@
-    properties(
-    [
-        parameters(
-            [string(defaultValue: PRODUCTION_SERVER, description: 'Server to deploy the package to', name: 'deployServer')]
-            )
-
-    ]
-       )
+properties([
+  parameters([
+    string(name: 'DEPLOY_ENV', defaultValue: 'TESTING', description: 'The target environment', )
+   ])
+])
 node("master"){
     
     stage("workspace clean") {
