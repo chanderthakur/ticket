@@ -8,6 +8,7 @@ node("master"){
             )
 
     ]
+       )
     
     stage("workspace clean") {
     deleteDir()
