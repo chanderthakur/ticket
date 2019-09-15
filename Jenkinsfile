@@ -14,7 +14,6 @@ node("master"){
         sh "cd ${archive}"
             sh "dir"
             sh "make"
-        }
          }catch(Exception ex) {
       error "Error encountered while building the rpm. Please go through the logs for more details"
     }
