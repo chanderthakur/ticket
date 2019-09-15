@@ -13,7 +13,7 @@ node("master"){
     try {
         dir("${archive}"){
             
-        sh "dir"
+        bat "dir"
             }
          }catch(Exception ex) {
       error "Error encountered while building the rpm. Please go through the logs for more details"
