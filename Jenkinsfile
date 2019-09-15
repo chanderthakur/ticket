@@ -11,6 +11,7 @@ node("master"){
       stage("build") {
           
     try {
+        sh "dir"
         sh "cd ${archive}"
             sh "dir"
             sh "make"
