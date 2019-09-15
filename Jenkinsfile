@@ -1,4 +1,4 @@
-properties([parameters([choice(choices: ['abc', 'xyz', 'both'], description: 'Enter the value', name: 'archive')])])
+properties([parameters([choice(choices: ['abc_abc', 'abc_xyz', 'both'], description: 'Enter the value', name: 'archive')])])
 node("master"){
     
     stage("workspace clean") {
@@ -11,7 +11,7 @@ node("master"){
       stage("build") {
           
     try {
-        dir("${env.WORKSPACE}\\${archive}_abc"){
+        dir("${env.WORKSPACE}\\${archive}"){
     sh "make"
         }
          }catch(Exception ex) {
