@@ -1,6 +1,3 @@
-
-node("master"){
-
     properties(
     [
         parameters(
@@ -9,6 +6,7 @@ node("master"){
 
     ]
        )
+node("master"){
     
     stage("workspace clean") {
     deleteDir()
