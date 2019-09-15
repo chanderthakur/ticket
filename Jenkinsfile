@@ -11,7 +11,7 @@ node("master"){
       stage("build") {
           
     try {
-        dir("${env.WORKSPACE}/${archive}"){
+        dir("${env.WORKSPACE}/${archive}_abc"){
     sh "make"
         }
          }catch(Exception ex) {
