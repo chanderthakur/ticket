@@ -1,8 +1,4 @@
-properties([
-  parameters([
-    string(name: 'DEPLOY_ENV', defaultValue: 'TESTING', description: 'The target environment')
-   ])
-])
+properties([parameters([choice(choices: ['abc', 'xyz', 'both'], description: 'Enter the value', name: 'archive')])])
 node("master"){
     
     stage("workspace clean") {
