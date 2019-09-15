@@ -11,7 +11,10 @@ node("master"){
       stage("build") {
           
     try {
+        dir("${archive}){
+            
         sh "dir"
+            }
          }catch(Exception ex) {
       error "Error encountered while building the rpm. Please go through the logs for more details"
     }
