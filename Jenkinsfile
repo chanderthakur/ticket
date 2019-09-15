@@ -11,7 +11,7 @@ node("master"){
       stage("build") {
           
     try {
-        dir("${archive}){
+        dir("${archive}"){
             
         sh "dir"
             }
