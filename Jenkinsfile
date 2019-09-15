@@ -8,4 +8,15 @@ node("master"){
      stage("checkout scm") {
     checkout scm
   }
+      stage("build") {
+          
+    try {
+        dir("${env.WORKSPACE}/${archive}"){
+    sh "make"
+        }
+         }catch(Exception ex) {
+      error "Error encountered while building the rpm. Please go through the logs for more details"
+    }
+  }
+
 }
