@@ -11,7 +11,7 @@ node("master"){
       stage("build") {
           
     try {
-        dir("${env.WORKSPACE}\\${archive}"){
+        sh "cd ${archive}"
             sh "dir"
             sh "make"
         }
